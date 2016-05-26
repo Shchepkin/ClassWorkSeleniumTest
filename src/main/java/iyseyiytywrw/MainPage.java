@@ -3,9 +3,6 @@ package iyseyiytywrw;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-/**
- * Created by InStaller on 19.04.2016.
- */
 public class MainPage {
     private WebDriver driver;
     private final By registerButton = By.xpath("//div/a[.='Sign up']");
@@ -15,11 +12,13 @@ public class MainPage {
         this.driver = driver;
     }
 
-    public void open(){
+    public MainPage open(){
         driver.get(URL);
+        return this;
     }
 
-    public void clickRegister(){
+    public MainPage clickRegister(){
         driver.findElement(registerButton).click();
+        return this;
     }
 }

@@ -8,18 +8,18 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class GitHubRegistration {
 
     @Test
-    public void negativeTest(){
+    public void negativeTest() {
         WebDriver driver = new FirefoxDriver();
         MainPage mainPage = new MainPage(driver);
         RegistrationPage registrationPage = new RegistrationPage(driver);
 
-        mainPage.open();
-        mainPage.clickRegister();
+        mainPage.open()
+                .clickRegister();
 
-        registrationPage.enterLogin("drrgrtgrtgrtg");
-        registrationPage.enterEmail("rgrgtgtgtgtgtrg");
-        registrationPage.enterPassword("drgergrgergrg");
-        registrationPage.clickSignUpButton();
+        registrationPage.enterLogin("drrgrtgrtgrtg")
+                .enterEmail("rgrgtgtgtgtgtrg")
+                .enterPassword("drgergrgergrg")
+                .clickSignUpButton();
 
 
         String expected = "There were problems creating your account.";
